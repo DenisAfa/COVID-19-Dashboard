@@ -14,5 +14,10 @@ module.exports = {
   "plugins": [
     ["module:fast-async", { "spec": true }],
     /* ... */
+    ["@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+    ],
   ]
 }
