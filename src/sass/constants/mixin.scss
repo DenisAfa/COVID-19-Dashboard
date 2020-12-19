@@ -1,0 +1,35 @@
+@mixin border() {
+    margin: 0.2rem;
+    border: solid 0.05rem $color-border;
+    border-radius: 2px;
+}
+
+@mixin add_information {
+    font: {
+        family: 'Prompt', sans-serif;
+        size: 1rem;
+    }
+    line-height: 110%;
+    letter-spacing: 0.13rem; 
+    color: $color-border; 
+}
+
+@mixin title {
+    font: {
+        family: 'Prompt', sans-serif;
+        size: 2rem;
+    }
+    line-height: 110%;
+    letter-spacing: 0.13rem; 
+    color: $color-font-grey; 
+}
+
+@mixin statistic-red {
+    font: {
+        family: 'Prompt', sans-serif;
+        size: 1.2rem;
+    }
+    line-height: 110%;
+    letter-spacing: 0.13rem; 
+    color: $color-font-red; 
+}
