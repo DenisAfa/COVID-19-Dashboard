@@ -135,10 +135,11 @@ body {
     height: 100%;  
     
     &__title {
-        display: flex;
         @include title();
         font-size: 0.6rem;
+        
         span {
+            display: block;
             align-items: center;
             justify-content: center;
         }        
@@ -161,47 +162,61 @@ body {
     @include add_information;
 }
 
-.details {
+.details-wrapper {
     display: flex;   
     flex-grow: 5;
     min-width: 420px;
     display: flex;    
     flex-direction: column;
+
+    .global-details {
+        
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        // min-height: 15rem;
+        
+        @include border();
+        
+        &__title {
+            @include title();
+            font-size: 1rem;
+            min-height: 3rem;
+            background-color: $color-primary;
+        }
+
+        &__global-volume {
+            
+            display: flex;
+            @include statistic-red();
+            height: 100%;
+            background-color: $color-primary;
+        }
+
+        &__volume {
+            min-height: 15rem;
+            @include border();
+            display: flex;
+            @include statistic-red();
+            height: 100%;
+            background-color: $color-primary;
+        }
+    }
+        
+    .chart {
+        @include border();
+        min-height: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-primary;
+        height: 100%;
+        @include add_information;
+    }
 }
 
-.details-wrapper {
-    display: flex;
-    
-}
 
-.global-details {
-    @include border();
-    display: flex;
-    flex-direction: column;
-    background-color: $color-primary;
-    flex-grow: 1;
-    min-height: 15rem;
-    @include add_information; 
-}
 
-.level-details {
-    @include border();
-    display: flex;
-    flex-direction: column;
-    background-color: $color-primary;
-    flex-grow: 1;
-    @include add_information;
-}
-
-.chart {
-    @include border();
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-primary;
-    height: 100%;
-    @include add_information;
-}
 
 
 

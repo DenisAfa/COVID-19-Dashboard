@@ -145,7 +145,6 @@ body {
   height: 100%;
 }
 .countries-cases__title {
-  display: flex;
   font-family: "Prompt", sans-serif;
   font-size: 2rem;
   line-height: 110%;
@@ -154,6 +153,7 @@ body {
   font-size: 0.6rem;
 }
 .countries-cases__title span {
+  display: block;
   align-items: center;
   justify-content: center;
 }
@@ -183,53 +183,60 @@ body {
   color: #686868;
 }
 
-.details {
+.details-wrapper {
   display: flex;
   flex-grow: 5;
   min-width: 420px;
   display: flex;
   flex-direction: column;
 }
-
-.details-wrapper {
+.details-wrapper .global-details {
   display: flex;
-}
-
-.global-details {
+  flex-direction: column;
+  flex-grow: 1;
   margin: 0.2rem;
   border: solid 0.05rem #686868;
   border-radius: 2px;
-  display: flex;
-  flex-direction: column;
+}
+.details-wrapper .global-details__title {
+  font-family: "Prompt", sans-serif;
+  font-size: 2rem;
+  line-height: 110%;
+  letter-spacing: 0.13rem;
+  color: #bdbdbd;
+  font-size: 1rem;
+  min-height: 3rem;
   background-color: #2f2f2f;
-  flex-grow: 1;
+}
+.details-wrapper .global-details__global-volume {
+  display: flex;
+  font-family: "Prompt", sans-serif;
+  font-size: 1.2rem;
+  line-height: 110%;
+  letter-spacing: 0.13rem;
+  color: #E60000;
+  height: 100%;
+  background-color: #2f2f2f;
+}
+.details-wrapper .global-details__volume {
   min-height: 15rem;
-  font-family: "Prompt", sans-serif;
-  font-size: 1rem;
-  line-height: 110%;
-  letter-spacing: 0.13rem;
-  color: #686868;
-}
-
-.level-details {
   margin: 0.2rem;
   border: solid 0.05rem #686868;
   border-radius: 2px;
   display: flex;
-  flex-direction: column;
-  background-color: #2f2f2f;
-  flex-grow: 1;
   font-family: "Prompt", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 110%;
   letter-spacing: 0.13rem;
-  color: #686868;
+  color: #E60000;
+  height: 100%;
+  background-color: #2f2f2f;
 }
-
-.chart {
+.details-wrapper .chart {
   margin: 0.2rem;
   border: solid 0.05rem #686868;
   border-radius: 2px;
+  min-height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
