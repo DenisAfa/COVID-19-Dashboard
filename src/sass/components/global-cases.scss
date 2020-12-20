@@ -1,0 +1,25 @@
+.global-cases {    
+    display: flex;
+    background-color: $color-primary;
+    height: 100%;
+    flex-grow: 1; 
+    max-width: 25rem;
+    @include border();
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        display: flex;
+        @include statistic-red();
+        color: white;
+        font-size: 1rem;
+        
+    }
+
+    &__volume {
+        @include statistic-red();
+        font-size: 2rem;       
+    }
+}

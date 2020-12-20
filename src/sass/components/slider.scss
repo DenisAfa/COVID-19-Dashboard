@@ -1,14 +1,62 @@
-// .center {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-// }
+.slider-header {
+    align-self: center;
+    position: relative;
+    transform: translate(-50%, -50%);
+}
 
-// input[type="checkbox"] {
-//     position: relative;
-//     width: 80px;
-//     heigth: 40px;
-//     -webkit-appearance: none;
+input[type="checkbox"] {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border-radius: 1px;
+    -webkit-appearance: none;
+    background: $color-border;
+    outline: none;
+    transition: .5s;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+}
 
-// }
+input:checked[type="checkbox"] {
+    background: $color-background;
+}
+
+input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+    background: $color-font-red;
+    transition: .5s;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+}
+
+input:checked[type="checkbox"]:before {
+    left: 25px;
+}
+
+//Global cases/Global details sliders
+
+.slider-global-cases {    
+    @include slider-main();
+}
+
+.slider-global-cases {
+    &__right:hover, &__left:hover {
+        @include slider-main-active();
+    }
+}
+
+.slider-countries-cases {    
+    @include slider-main();
+}
+
+.slider-countries-cases {
+    &__right:hover, &__left:hover {
+        @include slider-main-active();
+    }
+}
