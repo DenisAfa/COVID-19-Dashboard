@@ -173,12 +173,15 @@ body {
   justify-content: center;
 }
 .countries-cases__content {
-  display: flex;
   font-family: "Prompt", sans-serif;
   font-size: 1.2rem;
   line-height: 110%;
   letter-spacing: 0.13rem;
   color: #E60000;
+}
+
+.country__flag {
+  width: 50px;
 }
 
 .map {
