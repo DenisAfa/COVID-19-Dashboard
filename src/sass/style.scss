@@ -1,10 +1,1 @@
-@import 'base/reset';
-@import 'page/main';
-@import 'components/header';
-@import 'components/global-cases';
-@import 'components/map';
-@import 'components/countries-cases';
-@import 'constants/constants';
-@import 'constants/mixin';
-@import 'components/slider';
-
+@import 'base/reset', 'constants/constants', 'constants/mixin',  'components/countries-cases', 'components/global-cases', 'components/header', 'components/slider', 'components/map', 'page/main';

@@ -14,53 +14,67 @@
         <div class="header-wrapper">
             <div class="header-content">COVID-19 Dashboard by the RSSchool</div> 
             <div class="header-slider">
-                <div class="slider-title">
+                <div class="slider-title wholetime-day">
                     Whole/Day
                 </div>
-                <div class="slider-wholetime-day slider-header">
-                    <input type="checkbox" name="forwhole-forday">
-                </div>
-                <div class="slider-title">
+                <div class="slider-wrapper">
+                    <div class="slider-header__wholetime-day">
+                        <input type="checkbox" name="forwhole-forday">
+                    </div>
+                </div>                
+                <div class="slider-title values">
                     100/1
                 </div>
-                <div class="slider-values slider-header">
-                    <input type="checkbox" name="forwhole-forday">
-                </div>
+                <div class="slider-wrapper">
+                    <div class="slider-header__values">
+                        <input type="checkbox" name="forwhole-forday">
+                    </div>
+                </div>                
             </div>
         </div>
         <div class="content-wrapper">
-            <div class="cases-column-wrapper">
-                <div class="global-cases">
-                    <div class="global-cases__title">
-                        Global Cases
-                    </div>
-                    <div class="global-cases__global-volume">
-                        99 999 999
-                    </div>
+            <div class="countries-cases">
+                <div class="countries-cases__title">
+                    <span>Cases by</span>
+                    <span>Country/RRegion/Sovereignty</span>
                 </div>
-                <div class="countries-cases">
-                    <div class="countries-cases__title">
-                        <span>Cases by</span>
-                        <span>Country/RRegion/Sovereignty</span>
-                    </div>
-                    <table class="countries-cases__content">                        
-                    </table>
+                <table class="countries-cases__content">                        
+                </table>
+                <div class="slider-countries-cases">                        
+                    <button class="slider-countries-cases__left">
+                        <
+                    </button>                                               
+                    <div class="slider-countries-cases__content">
+                        Текущая страница
+                    </div>                        
+                    <button class="slider-countries-cases__right">
+                        >
+                    </button>                                              
                 </div>
-            </div>
+            </div>           
             <div class="map">
                 !!!!!MAP!!!!!!
             </div>
             <div class="details-wrapper">              
-                <div class="global-details">
-                    <div class="global-details__title">
-                        Global Recovers
+                <div class="global-cases">
+                    <div class="global-cases__title">
+                        Global Cases
                     </div>                        
-                    <div class="global-details__global-volume">
+                    <div class="global-cases__volume">
                         99 999 999
                     </div>
-                </div>                    
-                <table class="global-details__volume">                        
-                </table>                                               
+                    <div class="slider-global-cases">                        
+                        <button class="slider-global-cases__left">
+                            <
+                        </button>                                               
+                        <div class="slider-global-cases__content">
+                            Текущая страница
+                        </div>                        
+                        <button class="slider-global-cases__right">
+                            >
+                        </button>                                              
+                    </div>  
+                </div>
                 <div class="chart">
                     !!!!CHART!!!!!
                 </div>
