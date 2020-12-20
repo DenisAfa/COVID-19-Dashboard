@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVID-19 Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">  -->    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="main-wrapper">
+        <div class="header-wrapper">
+            <div class="header-content">COVID-19 Dashboard by the RSSchool</div> 
+            <div class="header-slider">
+                <div class="slider-title">
+                    Whole/Day
+                </div>
+                <div class="slider-wholetime-day slider-header">
+                    <input type="checkbox" name="forwhole-forday">
+                </div>
+                <div class="slider-title">
+                    100/1
+                </div>
+                <div class="slider-values slider-header">
+                    <input type="checkbox" name="forwhole-forday">
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="cases-column-wrapper">
+                <div class="global-cases">
+                    <div class="global-cases__title">
+                        Global Cases
+                    </div>
+                    <div class="global-cases__global-volume">
+                        99 999 999
+                    </div>
+                </div>
+                <div class="countries-cases">
+                    <div class="countries-cases__title">
+                        <span>Cases by</span>
+                        <span>Country/RRegion/Sovereignty</span>
+                    </div>
+                    <table class="countries-cases__content">                        
+                    </table>
+                </div>
+            </div>
+            <div class="map">
+                !!!!!MAP!!!!!!
+            </div>
+            <div class="details-wrapper">              
+                <div class="global-details">
+                    <div class="global-details__title">
+                        Global Recovers
+                    </div>                        
+                    <div class="global-details__global-volume">
+                        99 999 999
+                    </div>
+                </div>                    
+                <table class="global-details__volume">                        
+                </table>                                               
+                <div class="chart">
+                    !!!!CHART!!!!!
+                </div>
+            </div>            
+        </div>
+    </div>    
 </body>
 </html>
