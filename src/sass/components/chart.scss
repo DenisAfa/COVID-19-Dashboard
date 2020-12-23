@@ -1,0 +1,49 @@
+.chart {
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas {
+    width: 300px;
+    height: 250px;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.arrow__legend {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#slider {
+    width: 300px;
+    height: 250px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#polosa {
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+#polosa::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}

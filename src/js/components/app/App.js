@@ -3,6 +3,12 @@ import {
     ABSOLUTE_MEASURE_UNIT,
     COEFFICIENT_MEASURE_UNIT
 } from '../../constants/constants';
+import chartBar from '../charts/chartBar';
+import Charts from '../charts/chart';
+import ChartsDeath from '../charts/chartDeath';
+import ChartsHealed from '../charts/chartHealed';
+
+import Map from '../Map/map';
 
 import Data from '../data/Data';
 
@@ -20,6 +26,16 @@ export default class App {
     }
 
     async run() {
+        const charts = new Charts();
+        const chart = charts.create();
+        const chartDeath = new ChartsDeath();
+        const chartD = chartDeath.create();
+        const bar = new chartBar();
+        const BarD = bar.create();
+        const chartHealed = new ChartsHealed();
+        const chartH = chartHealed.create();
+        const map = new Map();
+        const mapR = map.create();
         this.dashboard = this.factory.create('absolute', this.isAllPeriod);
         this.dashboard.run();
         this.buttonGlobalCategory.addEventListener('click', () => this.changeGlobalInfo(event, this.dashboard));
