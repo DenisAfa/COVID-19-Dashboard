@@ -4,6 +4,8 @@ import {
     COEFFICIENT_MEASURE_UNIT
 } from '../../constants/constants';
 
+import Data from '../data/Data';
+
 export default class App {
     constructor() {
         this.isAllPeriod = true;
@@ -14,9 +16,10 @@ export default class App {
         this.buttonChangeUnit = document.querySelector('.slider__unit');
         this.dashboard = null;
         this.factory = new DashboardFactory();
+        this.globalInfo = null
     }
 
-    run() {
+    async run() {
         this.dashboard = this.factory.create('absolute', this.isAllPeriod);
         this.dashboard.run();
         this.buttonGlobalCategory.addEventListener('click', () => this.changeGlobalInfo(event, this.dashboard));
