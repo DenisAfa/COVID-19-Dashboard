@@ -295,7 +295,7 @@ input:checked[type=checkbox]:before {
 
 .table__wrapper {
   overflow-y: scroll;
-  height: 80vh;
+  height: 75vh;
 }
 
 .footer-wrapper {
@@ -337,6 +337,56 @@ input:checked[type=checkbox]:before {
 }
 .author a:hover {
   cursor: pointer;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas {
+  width: 300px;
+  height: 250px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.arrow__legend {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#slider {
+  width: 300px;
+  height: 250px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+#polosa {
+  width: 600px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+#polosa::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 :root {
@@ -418,6 +468,98 @@ html, body {
   letter-spacing: 0.13rem;
   color: #686868;
   height: 100%;
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+  .main-wrapper {
+    max-height: 100vh;
+    max-width: 100%;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .details-wrapper {
+    flex-grow: 1;
+    min-width: 30%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .map {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .table__wrapper {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .canvas {
+    width: 260px;
+    height: 200px;
+  }
+
+  .global-cases {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .header-wrapper {
+    flex-direction: column;
+    align-items: center;
+    border-style: none;
+    margin: 0;
+  }
+
+  .main-wrapper {
+    width: 100%;
+    border-color: #2f2f2f;
+    border-style: none;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: #2f2f2f;
+    border-style: none;
+  }
+
+  .countries-cases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+  }
+
+  .table__wrapper {
+    min-width: 100%;
+    border-style: none;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    margin: 0;
+    border-style: none;
+  }
+
+  .global-cases, .map {
+    border-style: none;
+    border-color: #2f2f2f;
+  }
+
+  .details-wrapper .chart {
+    border-style: none;
+    border-color: #2f2f2f;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
