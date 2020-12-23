@@ -7,9 +7,9 @@ export default class DashboardFactory {
         coefficient: DashboardWithCoefficient
     };
 
-    create(type = 'absolute') {
+    create(type = 'absolute', isAllPeriod) {
         const myDashboard = DashboardFactory.list[type];
-        const board = new myDashboard();
+        const board = new myDashboard(isAllPeriod);
         return board;
     }
 }

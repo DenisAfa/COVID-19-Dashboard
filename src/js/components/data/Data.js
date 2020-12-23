@@ -30,16 +30,16 @@ export default class Data {
     }
 
     async getGlobalPeriodData() {
-        let date = new Date()
-        let today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+        const date = new Date();
+        const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const data = await getData(`https://api.covid19api.com/world?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
-        return data.sort((prev, next) => next.TotalConfirmed - prev.TotalConfirmed)
+        return data.sort((prev, next) => next.TotalConfirmed - prev.TotalConfirmed);
     }
 
     async getCountryPeriodData(country) {
-        let date = new Date()
-        let today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+        const date = new Date();
+        const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const data = await getData(`https://api.covid19api.com/country/${country}?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
-        return data        
+        return data;
     }
 }

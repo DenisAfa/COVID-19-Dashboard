@@ -1,0 +1,20 @@
+.country__flag {
+    width: 50px;
+}
+
+.table__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    margin: 2px;
+}
+
+.table__country {
+    width: 30%;
+}
+
+.table__wrapper {
+    overflow-y: scroll;
+    height: 80vh;
+}

@@ -20,6 +20,7 @@
 
     &__volume {
         @include statistic-red();
-        font-size: 2rem;       
+        font-size: 2rem;
+        align-items: center;       
     }
 }
