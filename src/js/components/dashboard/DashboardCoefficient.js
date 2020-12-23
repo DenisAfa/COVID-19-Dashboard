@@ -16,10 +16,17 @@ export default class DashboardWithCoefficient extends Dashboard {
     showCountiesData(countryInfoParameter) {
         const table = document.querySelector('.countries-cases__content');
         table.innerHTML = '';
-        this.countriesInfo.sort((prev, next) => next[countryInfoParameter] - prev[countryInfoParameter])
-            .forEach((country) => {
+        this.countriesInfo.forEach((country) => {
                 this.createCountryInfo(country, countryInfoParameter, table);
             });
+        const lines = document.querySelectorAll('tr');
+        const columnNumber = 1
+        const sortedRows = Array.from(lines)
+            .slice(1)
+            .sort((rowA, rowB) => Number(rowB.cells[columnNumber].innerHTML) - Number(rowA.cells[columnNumber].innerHTML))
+        table.innerHTML = '';
+        table.append(...sortedRows);
+       
     }
 
     createCountryInfo(country, countryParam, table) {

@@ -4,7 +4,7 @@ import {
     COEFFICIENT_MEASURE_UNIT
 } from '../../constants/constants';
 
-import Data from '../data/Data';
+import tableSearch from '../../utils/tableSearch'
 
 export default class App {
     constructor() {
@@ -14,6 +14,7 @@ export default class App {
         this.buttonCountriesCategory = document.querySelector('.slider-countries-cases');
         this.buttonChangePeriod = document.querySelector('.slider__period');
         this.buttonChangeUnit = document.querySelector('.slider__unit');
+        this.search = document.querySelector('.countries__search')
         this.dashboard = null;
         this.factory = new DashboardFactory();
         this.globalInfo = null
@@ -26,6 +27,7 @@ export default class App {
         this.buttonCountriesCategory.addEventListener('click', () => this.changeCountriesInfo(event, this.dashboard));
         this.buttonChangePeriod.addEventListener('click', () => this.changePeriod());
         this.buttonChangeUnit.addEventListener('click', () => this.changeUnit());
+        this.search.addEventListener('keyup', tableSearch);
     }
 
     changePeriod() {
