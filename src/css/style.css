@@ -138,7 +138,7 @@ table {
 }
 
 .header-slider {
-  width: 15rem;
+  width: 22rem;
   display: flex;
   justify-content: space-between;
 }
@@ -296,6 +296,47 @@ input:checked[type=checkbox]:before {
 .table__wrapper {
   overflow-y: scroll;
   height: 80vh;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2rem;
+  border: solid 0.05rem #686868;
+  border-radius: 2px;
+  display: flex;
+  min-height: 50px;
+  background-color: #2f2f2f;
+  padding: 0.4rem;
+  font-family: "Prompt", sans-serif;
+  font-size: 2rem;
+  line-height: 110%;
+  letter-spacing: 0.13rem;
+  color: #bdbdbd;
+  font-size: 1rem;
+}
+
+.rs-logo {
+  display: flex;
+  height: 40px;
+}
+
+.copyright {
+  display: flex;
+}
+
+.author {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+}
+.author a {
+  text-decoration: none;
+  color: #E60000;
+}
+.author a:hover {
+  cursor: pointer;
 }
 
 :root {
