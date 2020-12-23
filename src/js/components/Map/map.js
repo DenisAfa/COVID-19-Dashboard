@@ -1,27 +1,27 @@
 export default class Map {
     create() {
-        var mapOptions = {
+        const mapOptions = {
             center: [17.385044, 78.486671],
-            zoom: 4,
+            zoom: 4
         };
 
-        var map = new L.map('map', mapOptions);
-        var layer = new L.TileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png');
+        const map = new L.map('map', mapOptions);
+        const layer = new L.TileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png');
 
         async function mapEffect({ leafletElement: map } = {}) {
             let response;
-        
+
             try {
-              response = await axios.get('https://corona.lmao.ninja/v2/countries');
-            } catch(e) {
-              console.log(`Failed to fetch countries: ${e.message}`, e);
-              return;
+                response = await axios.get('https://corona.lmao.ninja/v2/countries');
+            } catch (e) {
+                console.log(`Failed to fetch countries: ${e.message}`, e);
+                return;
             }
             const { data = [] } = response;
             const hasData = Array.isArray(data) && data.length > 0;
-    
+
             if (!hasData) return;
-    
+
             const geoJson = {
                 type: 'FeatureCollection',
                 features: data.map((country = {}) => {
@@ -30,18 +30,16 @@ export default class Map {
                     return {
                         type: 'Feature',
                         properties: {
-                            ...country,
+                            ...country
                         },
                         geometry: {
                             type: 'Point',
-                            coordinates: [lng, lat],
-                        },
+                            coordinates: [lng, lat]
+                        }
                     };
-                }),
+                })
             };
- 
         }
-
 
         map.addLayer(layer);
     }

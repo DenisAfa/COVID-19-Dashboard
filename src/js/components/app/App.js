@@ -10,7 +10,7 @@ import ChartsHealed from '../charts/chartHealed';
 
 import Map from '../Map/map';
 
-import tableSearch from '../../utils/tableSearch'
+import tableSearch from '../../utils/tableSearch';
 
 export default class App {
     constructor() {
@@ -20,10 +20,10 @@ export default class App {
         this.buttonCountriesCategory = document.querySelector('.slider-countries-cases');
         this.buttonChangePeriod = document.querySelector('.slider__period');
         this.buttonChangeUnit = document.querySelector('.slider__unit');
-        this.search = document.querySelector('.countries__search')
+        this.search = document.querySelector('.countries__search');
         this.dashboard = null;
         this.factory = new DashboardFactory();
-        this.globalInfo = null
+        this.globalInfo = null;
     }
 
     async run() {

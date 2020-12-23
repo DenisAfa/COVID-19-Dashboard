@@ -5,30 +5,30 @@ export default class chartHealed {
         this.globalInfo3 = null;
     }
 
-   async create() {
-    const data = new Data();
-    await data.initData()
-    .then(() => {
-        this.globalInfo3 = data.getGlobalPeriodData();
-        console.log(this.globalInfo3)
-    });
-        var ctx = document.getElementById('myChartHealed').getContext('2d');
-        var chart = new Chart(ctx, {
-    type: 'line',
+    async create() {
+        const data = new Data();
+        await data.initData()
+            .then(() => {
+                this.globalInfo3 = data.getGlobalPeriodData();
+                console.log(this.globalInfo3);
+            });
+        const ctx = document.getElementById('myChartHealed').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
 
-    data: {
-        labels: ['Сентябрь', 'Октябрь', 'Ноябрь'],
-        datasets: [{
-            label: 'Total recovered',
-            backgroundColor: 'rgba(200, 0, 0, 0.1)',
-            borderColor: 'rgb(255, 0, 0)',
-            data: [this.globalInfo3[112].TotalRecovered, this.globalInfo3[50].TotalRecovered, this.globalInfo3[0].TotalRecovered]
-        }]
-    },
+            data: {
+                labels: ['Сентябрь', 'Октябрь', 'Ноябрь'],
+                datasets: [{
+                    label: 'Total recovered',
+                    backgroundColor: 'rgba(200, 0, 0, 0.1)',
+                    borderColor: 'rgb(255, 0, 0)',
+                    data: [this.globalInfo3[112].TotalRecovered, this.globalInfo3[50].TotalRecovered, this.globalInfo3[0].TotalRecovered]
+                }]
+            },
 
-    options: {
-        responsive: false
-    }
-});
+            options: {
+                responsive: false
+            }
+        });
     }
 }
