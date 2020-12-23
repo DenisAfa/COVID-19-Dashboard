@@ -27,6 +27,13 @@ export default class App {
     }
 
     async run() {
+        this.dashboard = this.factory.create('absolute', this.isAllPeriod);
+        this.dashboard.run();
+        this.buttonGlobalCategory.addEventListener('click', () => this.changeGlobalInfo(event, this.dashboard));
+        this.buttonCountriesCategory.addEventListener('click', () => this.changeCountriesInfo(event, this.dashboard));
+        this.buttonChangePeriod.addEventListener('click', () => this.changePeriod());
+        this.buttonChangeUnit.addEventListener('click', () => this.changeUnit());
+        this.search.addEventListener('keyup', tableSearch);
         const charts = new Charts();
         const chart = charts.create();
         const chartDeath = new ChartsDeath();
@@ -37,13 +44,6 @@ export default class App {
         const chartH = chartHealed.create();
         const map = new Map();
         const mapR = map.create();
-        this.dashboard = this.factory.create('absolute', this.isAllPeriod);
-        this.dashboard.run();
-        this.buttonGlobalCategory.addEventListener('click', () => this.changeGlobalInfo(event, this.dashboard));
-        this.buttonCountriesCategory.addEventListener('click', () => this.changeCountriesInfo(event, this.dashboard));
-        this.buttonChangePeriod.addEventListener('click', () => this.changePeriod());
-        this.buttonChangeUnit.addEventListener('click', () => this.changeUnit());
-        this.search.addEventListener('keyup', tableSearch);
     }
 
     changePeriod() {
