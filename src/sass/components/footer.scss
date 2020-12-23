@@ -1,0 +1,35 @@
+.footer-wrapper {  
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+    @include border();    
+    display: flex;    
+    min-height: 50px;
+    background-color: $color-primary;    
+    padding: 0.4rem; 
+    @include title();
+    font-size: 1rem;   
+}
+
+.rs-logo {
+    display: flex;
+    height: 40px;
+}
+
+.copyright {
+    display: flex;        
+}
+
+.author {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    
+    a { 
+        text-decoration: none;
+        color: $color-font-red; 
+    }    
+    a:hover {
+        cursor: pointer;
+    } 
+}
