@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">  -->    
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 </head>
 <body>
     <div class="main-wrapper">
@@ -46,7 +48,7 @@
                 </div>
             </div>           
             <div class="map">
-                !!!!!MAP!!!!!!
+                <div id = "map" style = "width:100%; height:100%;"></div>
             </div>
             <div class="details-wrapper">              
                 <div class="global-cases">
@@ -59,10 +61,49 @@
                     </div>  
                 </div>
                 <div class="chart">
-                    !!!!CHART!!!!!
+                    <div id="slider">
+                        <div id="polosa">
+                          <div class="d"><canvas class="canvas" id="myChart" height="250px"></canvas></div> 
+                          <div class="d"><canvas class = "canvas" id="myChartDeath" height="250px"></canvas></div>
+                          <div class="d"><canvas class = "canvas" id="myChartHealed" height="250px"></canvas></div> 
+                        </div>
+                </div>
+                    <div class="legend">
+                       <button id="slider-right">
+                        <img class="arrow__legend" src="https://www.flaticon.com/svg/static/icons/svg/467/467272.svg" alt="">
+                       </button> 
+                        <span>Next chart</span>
+                        <button id="slider-left">
+                            <img class="arrow__legend" src="https://www.flaticon.com/svg/static/icons/svg/467/467280.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="d"><canvas class="canvas" id="chartBar" height="250px"></canvas></div> 
                 </div>
             </div>            
         </div>
     </div>    
+    <script>
+        document.getElementById('slider-left').onclick = sliderLeft;
+        let left = 0;
+        document.getElementById('slider-right').onclick = sliderRight;
+        function sliderRight() {
+            let polosa = document.getElementById('polosa');
+            left += 300;
+            if (left > 600) {
+                left = 0;
+            }
+            polosa.style.left = left + 'px';
+        }
+
+        function sliderLeft() {
+            let polosa = document.getElementById('polosa');
+            left -= 300;
+            if (left < -600) {
+                left = 0;
+            }
+            polosa.style.left = left + 'px';
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </body>
 </html>
