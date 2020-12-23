@@ -14,8 +14,12 @@ export default class Data {
         const date = new Date();
         const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const dataPeriodGlobal = await getData(`https://api.covid19api.com/world?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
-        dataPeriodGlobal.sort((prev, next) => next.TotalConfirmed - prev.TotalConfirmed)
-        const dataPeriodCountry = await getData(`https://api.covid19api.com/country/${country}?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
+        dataPeriodGlobal.sort((prev, next) => next.TotalConfirmed - prev.TotalConfirmed);
+        let dataPeriodCountry
+        if(country) {
+            dataPeriodCountry = await getData(`https://api.covid19api.com/country/${country}?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
+        }
+        
         this.data = data;
         this.population = population;
         this.periodGlobalData = dataPeriodGlobal;

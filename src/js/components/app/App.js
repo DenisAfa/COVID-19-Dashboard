@@ -3,8 +3,14 @@ import {
     ABSOLUTE_MEASURE_UNIT,
     COEFFICIENT_MEASURE_UNIT
 } from '../../constants/constants';
+import chartBar from '../charts/chartBar';
+import Charts from '../charts/chart';
+import ChartsDeath from '../charts/chartDeath';
+import ChartsHealed from '../charts/chartHealed';
 
-import Data from '../data/Data';
+import Map from '../Map/map';
+
+import tableSearch from '../../utils/tableSearch'
 
 export default class App {
     constructor() {
@@ -14,18 +20,30 @@ export default class App {
         this.buttonCountriesCategory = document.querySelector('.slider-countries-cases');
         this.buttonChangePeriod = document.querySelector('.slider__period');
         this.buttonChangeUnit = document.querySelector('.slider__unit');
+        this.search = document.querySelector('.countries__search')
         this.dashboard = null;
         this.factory = new DashboardFactory();
         this.globalInfo = null
     }
 
     async run() {
+        const charts = new Charts();
+        const chart = charts.create();
+        const chartDeath = new ChartsDeath();
+        const chartD = chartDeath.create();
+        const bar = new chartBar();
+        const BarD = bar.create();
+        const chartHealed = new ChartsHealed();
+        const chartH = chartHealed.create();
+        const map = new Map();
+        const mapR = map.create();
         this.dashboard = this.factory.create('absolute', this.isAllPeriod);
         this.dashboard.run();
         this.buttonGlobalCategory.addEventListener('click', () => this.changeGlobalInfo(event, this.dashboard));
         this.buttonCountriesCategory.addEventListener('click', () => this.changeCountriesInfo(event, this.dashboard));
         this.buttonChangePeriod.addEventListener('click', () => this.changePeriod());
         this.buttonChangeUnit.addEventListener('click', () => this.changeUnit());
+        this.search.addEventListener('keyup', tableSearch);
     }
 
     changePeriod() {
