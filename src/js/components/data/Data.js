@@ -4,17 +4,22 @@ export default class Data {
     constructor() {
         this.data = null;
         this.population = null;
+        this.dataPeriodGlobal = null;
+        this.dataPeriodCountry = null;
     }
 
-    async run() {
-        await this.initData();
-    }
-
-    async initData() {
+    async initData(country) {
         const data = await getData('https://api.covid19api.com/summary');
         const population = await getData('https://restcountries.eu/rest/v2/all?fields=name;population;flag');
+        const date = new Date();
+        const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+        const dataPeriodGlobal = await getData(`https://api.covid19api.com/world?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
+        dataPeriodGlobal.sort((prev, next) => next.TotalConfirmed - prev.TotalConfirmed)
+        const dataPeriodCountry = await getData(`https://api.covid19api.com/country/${country}?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
         this.data = data;
         this.population = population;
+        this.periodGlobalData = dataPeriodGlobal;
+        this.dataPeriodCountry = dataPeriodCountry;
     }
 
     getGlobalData() {
@@ -29,17 +34,11 @@ export default class Data {
         return this.population;
     }
 
-    async getGlobalPeriodData() {
-        const date = new Date();
-        const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-        const data = await getData(`https://api.covid19api.com/world?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
-        return data.sort((prev, next) => next.TotalConfirmed - prev.TotalConfirmed);
+    getGlobalPeriodData() {
+        return this.periodGlobalData;
     }
 
-    async getCountryPeriodData(country) {
-        const date = new Date();
-        const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-        const data = await getData(`https://api.covid19api.com/country/${country}?from=2020-09-01T00:00:00Z&to=${today}T00:00:00Z`);
-        return data;
+    getCountryPeriodData() {
+        return this.dataPeriodCountry;
     }
 }

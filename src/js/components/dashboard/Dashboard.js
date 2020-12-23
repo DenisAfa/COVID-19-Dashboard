@@ -35,7 +35,7 @@ export default class Dashboard {
 
     async getData() {
         const data = new Data();
-        await data.run()
+        await data.initData()
             .then(() => {
                 this.globalInfo = data.getGlobalData();
                 this.countriesInfo = data.getCountriesData();
