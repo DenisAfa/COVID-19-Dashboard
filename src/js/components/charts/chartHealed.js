@@ -10,7 +10,6 @@ export default class chartHealed {
         await data.initData()
             .then(() => {
                 this.globalInfo3 = data.getGlobalPeriodData();
-                console.log(this.globalInfo3);
             });
         const ctx = document.getElementById('myChartHealed').getContext('2d');
         const chart = new Chart(ctx, {

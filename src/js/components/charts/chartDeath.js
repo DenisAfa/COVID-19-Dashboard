@@ -10,7 +10,6 @@ export default class chartDeath {
         await data.initData()
             .then(() => {
                 this.globalInfo2 = data.getGlobalPeriodData();
-                console.log(this.globalInfo2);
             });
         const ctx = document.getElementById('myChartDeath').getContext('2d');
         const chart = new Chart(ctx, {

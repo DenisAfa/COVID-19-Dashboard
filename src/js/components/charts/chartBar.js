@@ -10,7 +10,6 @@ export default class chartBar {
         await dataNew.initData()
             .then(() => {
                 this.globalInfo4 = dataNew.getGlobalPeriodData();
-                console.log(this.globalInfo4);
             });
         const ctx = document.getElementById('chartBar').getContext('2d');
         const chart = new Chart(ctx, {

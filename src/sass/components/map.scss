@@ -8,4 +8,5 @@
     background-color: $color-primary;
     flex-grow: 3;
     @include add_information;
+    z-index: 10;
 }

@@ -7,10 +7,9 @@ import chartBar from '../charts/chartBar';
 import Charts from '../charts/chart';
 import ChartsDeath from '../charts/chartDeath';
 import ChartsHealed from '../charts/chartHealed';
-
 import Map from '../Map/map';
-
 import tableSearch from '../../utils/tableSearch';
+
 
 export default class App {
     constructor() {

@@ -10,7 +10,6 @@ export default class chart {
         await data.initData()
             .then(() => {
                 this.globalInfo1 = data.getGlobalPeriodData();
-                console.log(this.globalInfo1);
             });
         const ctx = document.getElementById('myChart').getContext('2d');
         const chart = new Chart(ctx, {
