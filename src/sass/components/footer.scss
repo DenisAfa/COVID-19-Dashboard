@@ -1,13 +1,13 @@
-.footer-wrapper {  
+.footer-wrapper { 
+    @include all-blocks-title();
+    @include border();
     display: flex;   
     justify-content: space-between;
-    align-items: center;
-    @include border();    
+    align-items: center;        
     display: flex;    
     min-height: 50px;
     background-color: $color-primary;    
-    padding: 0.4rem; 
-    @include title();
+    padding: 0.4rem;   
     font-size: 1rem;   
 }
 

@@ -36,22 +36,22 @@ html, body {
     flex-direction: column;
     min-height: 100%;
 
-    .global-cases {        
+    .global-cases {   
+        @include border();
         display: flex;
         flex-direction: column;
-        height: 8rem;        
-        @include border();
+        height: 8rem;       
         
         &__title {
-            display: flex;
-            @include title();
+            @include all-blocks-title();
+            display: flex;            
             font-size: 1rem;
             background-color: $color-primary;            
         }
 
-        &__volume {           
-            display: flex;
-            @include statistic-red();
+        &__volume { 
+            @include statistic-content-color_red();
+            display: flex;            
             height: 100%;
             background-color: $color-primary;
         }
@@ -59,12 +59,14 @@ html, body {
         
     .chart {
         @include border();        
+        @include slider-main;
+        outline: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $color-primary;
-        @include add_information;
+        background-color: $color-primary;        
         height: 100%;
+        min-width: 98%;    
     }
 }
 
@@ -110,7 +112,6 @@ html, body {
 }
 
 @media (max-width: 1000px) {
-
     .header-wrapper {
         flex-direction: column;    
         align-items: center;

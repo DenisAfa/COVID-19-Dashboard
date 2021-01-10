@@ -9,7 +9,7 @@
     min-height: 100%;  
     
     &__title {
-        @include title();
+        @include all-blocks-title();
         font-size: 0.6rem;
         
         span {

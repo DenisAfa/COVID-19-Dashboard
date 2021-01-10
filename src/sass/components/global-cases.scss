@@ -1,25 +1,25 @@
-.global-cases {    
+.global-cases {
+    @include border();
     display: flex;
     background-color: $color-primary;
     height: 100%;
     flex-grow: 1; 
-    max-width: 25rem;
-    @include border();
+    max-width: 25rem;    
     flex-direction: column;
     flex: 1 1 auto;
     align-items: center;
     justify-content: center;
 
-    &__title {
-        display: flex;
-        @include statistic-red();
+    &__all-blocks-title {
+        @include statistic-content-color_red();
+        display: flex;        
         color: white;
         font-size: 1rem;
         
     }
 
     &__volume {
-        @include statistic-red();
+        @include statistic-content-color_red();
         font-size: 2rem;
         align-items: center;       
     }

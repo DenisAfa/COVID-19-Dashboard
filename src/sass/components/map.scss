@@ -1,12 +1,12 @@
 .map {
+    @include border();
+    @include map-block_style;
     display: flex;
     align-items: center;
-    justify-content: center;
-    @include border();
+    justify-content: center;    
     width: 100%;
     min-height: 100%;
     background-color: $color-primary;
-    flex-grow: 3;
-    @include add_information;
+    flex-grow: 3;    
     z-index: 10;
 }
