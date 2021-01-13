@@ -17,4 +17,11 @@
 .table__wrapper {
     overflow-y: scroll;
     height: 75vh;
+    width: 100%;
+}
+
+.countries__search {
+    background-color: $color-font-grey;
+    border-radius: 1px;
+    outline: none;
 }
