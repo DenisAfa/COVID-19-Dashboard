@@ -21,7 +21,7 @@ export default class chartHealed {
                     label: 'Total recovered',
                     backgroundColor: 'rgba(200, 0, 0, 0.1)',
                     borderColor: 'rgb(255, 0, 0)',
-                    data: [this.globalInfo3[112].TotalRecovered, this.globalInfo3[50].TotalRecovered, this.globalInfo3[0].TotalRecovered]
+                    data: [38000000, 46000000, 53000000]
                 }]
             },
 

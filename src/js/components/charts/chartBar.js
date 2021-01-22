@@ -21,7 +21,7 @@ export default class chartBar {
                     label: 'Total Information',
                     backgroundColor: 'rgba(200, 0, 0, 0.4)',
                     borderColor: 'rgb(255, 0, 0)',
-                    data: [this.globalInfo4[112].NewDeaths, this.globalInfo4[50].NewDeaths, this.globalInfo4[0].NewDeaths]
+                    data: [1680000, 1750000, 2050000]
                 }]
             },
 

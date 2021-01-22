@@ -3,11 +3,12 @@ import {
     ABSOLUTE_MEASURE_UNIT,
     COEFFICIENT_MEASURE_UNIT
 } from '../../constants/constants';
-import chartBar from '../charts/chartBar';
+import Map from '../Map/map';
 import Charts from '../charts/chart';
 import ChartsDeath from '../charts/chartDeath';
 import ChartsHealed from '../charts/chartHealed';
-import Map from '../Map/map';
+import chartBar from '../charts/chartBar';
+import ChartSlider from '../charts/chartsSlider';
 import tableSearch from '../../utils/tableSearch';
 
 
@@ -33,6 +34,8 @@ export default class App {
         this.buttonChangePeriod.addEventListener('click', () => this.changePeriod());
         this.buttonChangeUnit.addEventListener('click', () => this.changeUnit());
         this.search.addEventListener('keyup', tableSearch);
+        const map = new Map();
+        const mapR = map.create();
         const charts = new Charts();
         const chart = charts.create();
         const chartDeath = new ChartsDeath();
@@ -41,8 +44,8 @@ export default class App {
         const BarD = bar.create();
         const chartHealed = new ChartsHealed();
         const chartH = chartHealed.create();
-        const map = new Map();
-        const mapR = map.create();
+        const chartSlider = new ChartSlider();
+        const chartS = chartSlider.create();
     }
 
     changePeriod() {

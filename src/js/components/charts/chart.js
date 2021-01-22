@@ -22,7 +22,7 @@ export default class chart {
                         label: 'Total Confirmed',
                         backgroundColor: 'rgba(200, 0, 0, 0.1)',
                         borderColor: 'rgb(255, 0, 0)',
-                        data: [this.globalInfo1[112].TotalConfirmed, this.globalInfo1[50].TotalConfirmed, this.globalInfo1[0].TotalConfirmed]
+                        data: [60000000, 74000000, 96000000]
                     }
                 ]
             },

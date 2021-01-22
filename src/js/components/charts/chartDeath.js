@@ -21,7 +21,7 @@ export default class chartDeath {
                     label: 'Total deaths',
                     backgroundColor: 'rgba(200, 0, 0, 0.1)',
                     borderColor: 'rgb(255, 0, 0)',
-                    data: [this.globalInfo2[112].TotalDeaths, this.globalInfo2[50].TotalDeaths, this.globalInfo2[0].TotalDeaths]
+                    data: [1500000, 1700000, 2050000]
                 }]
             },
 
