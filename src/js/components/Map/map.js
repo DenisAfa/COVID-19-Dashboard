@@ -1,3 +1,10 @@
+import {
+    COUNTRIES_INFO_URL,
+    FEATURE_COLLECTION,
+    FEATURE,
+    POINT
+} from '../../constants/constants';
+
 export default class Map {
     create() {
         const mapOptions = {
@@ -12,7 +19,7 @@ export default class Map {
             let response;
 
             try {
-                response = await axios.get('https://corona.lmao.ninja/v2/countries');
+                response = await axios.get(COUNTRIES_INFO_URL);
             } catch (e) {
                 console.log(`Failed to fetch countries: ${e.message}`, e);
                 return;
@@ -23,17 +30,17 @@ export default class Map {
             if (!hasData) return;
 
             const geoJson = {
-                type: 'FeatureCollection',
+                type: FEATURE_COLLECTION,
                 features: data.map((country = {}) => {
                     const { countryInfo = {} } = country;
                     const { lat, long: lng } = countryInfo;
                     return {
-                        type: 'Feature',
+                        type: FEATURE,
                         properties: {
                             ...country
                         },
                         geometry: {
-                            type: 'Point',
+                            type: POINT,
                             coordinates: [lng, lat]
                         }
                     };

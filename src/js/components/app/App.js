@@ -8,9 +8,11 @@ import Charts from '../charts/chart';
 import ChartsDeath from '../charts/chartDeath';
 import ChartsHealed from '../charts/chartHealed';
 import chartBar from '../charts/chartBar';
-import ChartSlider from '../charts/chartsSlider';
+import {
+    sliderLeft,
+    sliderRight
+} from '../charts/chartsSlider';
 import tableSearch from '../../utils/tableSearch';
-
 
 export default class App {
     constructor() {
@@ -44,8 +46,8 @@ export default class App {
         const BarD = bar.create();
         const chartHealed = new ChartsHealed();
         const chartH = chartHealed.create();
-        const chartSlider = new ChartSlider();
-        const chartS = chartSlider.create();
+        sliderRight();
+        sliderLeft();
     }
 
     changePeriod() {

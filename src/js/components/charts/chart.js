@@ -1,4 +1,8 @@
 import Data from '../data/Data';
+import {
+    MONTHS,
+    TOTAL_CONFIRMED
+} from '../../constants/constants';
 
 export default class chart {
     constructor() {
@@ -16,10 +20,10 @@ export default class chart {
             type: 'line',
 
             data: {
-                labels: ['Сентябрь', 'Октябрь', 'Ноябрь'],
+                labels: MONTHS,
                 datasets: [
                     {
-                        label: 'Total Confirmed',
+                        label: TOTAL_CONFIRMED,
                         backgroundColor: 'rgba(200, 0, 0, 0.1)',
                         borderColor: 'rgb(255, 0, 0)',
                         data: [60000000, 74000000, 96000000]

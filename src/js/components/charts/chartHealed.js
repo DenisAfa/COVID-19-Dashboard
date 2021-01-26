@@ -1,4 +1,8 @@
 import Data from '../data/Data';
+import {
+    MONTHS,
+    TOTAL_RECOVERED
+} from '../../constants/constants';
 
 export default class chartHealed {
     constructor() {
@@ -16,9 +20,9 @@ export default class chartHealed {
             type: 'line',
 
             data: {
-                labels: ['Сентябрь', 'Октябрь', 'Ноябрь'],
+                labels: MONTHS,
                 datasets: [{
-                    label: 'Total recovered',
+                    label: TOTAL_RECOVERED,
                     backgroundColor: 'rgba(200, 0, 0, 0.1)',
                     borderColor: 'rgb(255, 0, 0)',
                     data: [38000000, 46000000, 53000000]

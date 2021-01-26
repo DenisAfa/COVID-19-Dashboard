@@ -1,4 +1,8 @@
 import Data from '../data/Data';
+import {
+    MONTHS,
+    TOTAL_INFORMATION
+} from '../../constants/constants';
 
 export default class chartBar {
     constructor() {
@@ -16,9 +20,9 @@ export default class chartBar {
             type: 'bar',
 
             data: {
-                labels: ['Сентябрь', 'Октябрь', 'Ноябрь'],
+                labels: MONTHS,
                 datasets: [{
-                    label: 'Total Information',
+                    label: TOTAL_INFORMATION,
                     backgroundColor: 'rgba(200, 0, 0, 0.4)',
                     borderColor: 'rgb(255, 0, 0)',
                     data: [1680000, 1750000, 2050000]

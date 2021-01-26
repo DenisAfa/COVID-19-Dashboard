@@ -1,4 +1,8 @@
 import Data from '../data/Data';
+import {
+    MONTHS,
+    TOTAL_DEATHS
+} from '../../constants/constants';
 
 export default class chartDeath {
     constructor() {
@@ -16,9 +20,9 @@ export default class chartDeath {
             type: 'line',
 
             data: {
-                labels: ['Сентябрь', 'Октябрь', 'Ноябрь'],
+                labels: MONTHS,
                 datasets: [{
-                    label: 'Total deaths',
+                    label: TOTAL_DEATHS,
                     backgroundColor: 'rgba(200, 0, 0, 0.1)',
                     borderColor: 'rgb(255, 0, 0)',
                     data: [1500000, 1700000, 2050000]

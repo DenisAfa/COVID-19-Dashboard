@@ -13,6 +13,14 @@ const SHOW_GLOBAL_INFO = 'showGlobalData';
 const SHOW_COUNTRIES_INFO = 'showCountiesData';
 const ABSOLUTE_MEASURE_UNIT = 'absolute';
 const COEFFICIENT_MEASURE_UNIT = 'coefficient';
+const COUNTRIES_INFO_URL = 'https://corona.lmao.ninja/v2/countries';
+const FEATURE_COLLECTION = 'FeatureCollection';
+const FEATURE = 'Feature';
+const POINT = 'Point';
+const MONTHS = ['Сентябрь', 'Октябрь', 'Ноябрь'];
+const TOTAL_INFORMATION = 'TotalInformation';
+const DATA_URL = 'https://api.covid19api.com/summary';
+const POPULATION_URL = 'https://restcountries.eu/rest/v2/all?fields=name;population;flag';
 
 export {
     WORLD_POPULATION,
@@ -29,5 +37,13 @@ export {
     SHOW_GLOBAL_INFO,
     SHOW_COUNTRIES_INFO,
     ABSOLUTE_MEASURE_UNIT,
-    COEFFICIENT_MEASURE_UNIT
+    COEFFICIENT_MEASURE_UNIT,
+    COUNTRIES_INFO_URL,
+    FEATURE_COLLECTION,
+    FEATURE,
+    POINT,
+    MONTHS,
+    TOTAL_INFORMATION,
+    DATA_URL,
+    POPULATION_URL
 };

@@ -8,8 +8,8 @@ export default class DashboardFactory {
     };
 
     create(type = 'absolute', isAllPeriod) {
-        const myDashboard = DashboardFactory.list[type];
-        const board = new myDashboard(isAllPeriod);
+        const MyDashboard = DashboardFactory.list[type];
+        const board = new MyDashboard(isAllPeriod);
         return board;
     }
 }
