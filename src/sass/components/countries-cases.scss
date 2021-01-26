@@ -1,0 +1,28 @@
+.countries-cases {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;   
+    background-color: $color-primary;    
+    
+    @include border();
+    min-height: 100%;  
+    
+    &__title {
+        @include all-blocks-title();
+        font-size: 0.6rem;
+        
+        span {
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }        
+    }
+
+    &__content {
+        font-size: 16px;
+        font-family: 'Prompt', sans-serif;
+        color: $color-font-red;
+    }
+}
+

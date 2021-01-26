@@ -1,0 +1,26 @@
+.header-wrapper {
+    @include border();
+    @include all-blocks-title();  
+    display: flex;   
+    justify-content: space-between;        
+    display: flex;    
+    min-height: 60px;
+    background-color: $color-primary;    
+    padding: 0.4rem; 
+     
+}
+
+.header-content {
+    display: flex;
+}
+
+.header-slider {
+    width: 22rem;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.slider-title {
+    display: flex;
+    font-size: 0.8rem;
+}

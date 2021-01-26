@@ -1,0 +1,16 @@
+@import 'base/reset';
+
+@import 'constants/constants';
+@import 'constants/mixin';
+
+@import 'components/countries-cases';
+@import 'components/global-cases'; 
+@import 'components/header';
+@import 'components/slider'; 
+@import 'components/map';
+@import 'components/table';
+@import 'components/footer';
+@import 'components/chart';
+
+@import 'page/main';
+
